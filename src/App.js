@@ -39,7 +39,7 @@ function App() {
 
       <main className="wrapper">
         <div className="form-shell">
-          <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={e => handleSubmit(e)}>
+          <form name="contact" method="POST" netlify data-netlify-honeypot="bot-field" onSubmit={e => handleSubmit(e)}>
             <input type="hidden" name="form-name" value="contact" />
             <input 
               type="text" 
