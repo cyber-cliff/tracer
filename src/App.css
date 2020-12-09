@@ -1,19 +1,63 @@
-.App {
+.app {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.wrapper {
+  position: relative;
+  background: url('./blya.jpg') no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 0;
+  padding-top: 149.85%;
 }
 
+.form-shell {
+  width: 50%;
+  height: 75%;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+form {
+  padding-top: 5px;
+  background-color: white;
+}
+form >input, button {
+  margin-top: 10px;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid black;
+}
+footer, header {
+  padding: 20px 0;
+  background-color: #61dafb;
+}
+
+button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border: none;
+}
+a {
+  text-decoration: none;
+}
+
+
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
+  .app-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
-.App-header {
+.app-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -24,7 +68,7 @@
   color: white;
 }
 
-.App-link {
+.app-link {
   color: #61dafb;
 }
 
