@@ -40,9 +40,9 @@ footer, header {
   background-color: #61dafb;
 }
 
-button {
+.submit-btn {
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   padding: 5px 10px;
   border: none;
 }

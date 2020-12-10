@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './App.css'
+import rules from './test.txt'
 
 function App() {
   // const [submitted, setSubmit] = useState(false)
@@ -18,13 +19,14 @@ function App() {
   function handleSubmit(e) {
     e.preventDefault()
     
-    console.log(formData)
 		fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contant", ...formData })
+      body: encode({ "form-name": "contact", ...formData })
     })
-		.then( () => { alert("Success!") })
+    // .then( () => { alert("Success!") })
+    .then( () => { console.log("Success!") })
+
 		.catch( err => console.log("err: ", err.message))
   }
     
@@ -39,8 +41,14 @@ function App() {
 
       <main className="wrapper">
         <div className="form-shell">
-          <form name="contact" method="POST" netlify data-netlify-honeypot="bot-field" onSubmit={e => handleSubmit(e)}>
+          <form onSubmit={e => handleSubmit(e)}>
             <input type="hidden" name="form-name" value="contact" />
+            <p hidden>
+              <label>
+                Don’t fill this out:{" "}
+                <input name="bot-field" onChange={handleChange} />
+              </label>
+            </p>
             <input 
               type="text" 
               name="name" 
@@ -48,7 +56,7 @@ function App() {
               onChange={handleChange} 
               placeholder="Name"
               required 
-            />
+            />{star}
             <br />
             <input 
               type="email" 
@@ -57,7 +65,7 @@ function App() {
               onChange={handleChange} 
               placeholder="Email"
               required
-            />
+            />{star}
             <br />
             <input 
               type="text" 
@@ -65,9 +73,11 @@ function App() {
               value={formData.phone} 
               onChange={handleChange} 
               placeholder="Phone"
+              style={{marginRight:"7px"}}
             />
             <br />
-            <button type="submit">submit</button>
+            <button type="submit" className="submit-btn">submit</button>
+            <p className="policy">{star}by submitting this form you agree with our <a href={rules} target="_blank" rel="noopener noreferrer">code of conduct</a></p>
           </form>
         </div>
       </main>
@@ -79,4 +89,4 @@ function App() {
   )
 }
 
-export default App;
+export default App
