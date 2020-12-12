@@ -1,3 +1,41 @@
+a {
+  text-decoration: none;
+}
+
+form > input {
+  margin-top: 10px;
+}
+
+@media (max-width: 375px) {
+  form > input {
+    margin-top: 7px;
+  }
+}
+
+footer {
+  background-color: white;
+}
+
+input {
+  font-size: 16px;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid white;
+  color: white;
+}
+input {
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
+}
+input:focus {
+  border-bottom: 1px solid white;
+  outline: none;
+  box-shadow: none;
+}
+input::placeholder {
+  color: white;
+}
+
 .app {
   text-align: center;
 }
@@ -13,42 +51,70 @@
 
 .form-shell {
   width: 50%;
-  height: 75%;
   overflow: auto;
   margin: auto;
   position: absolute;
-  top: 0;
+  top: 15px;
   bottom: 0;
   right: 0;
   left: 0;
 }
 
-form {
-  padding-top: 5px;
-  background-color: white;
-}
-form >input, button {
-  margin-top: 10px;
-}
-
-input {
-  border: none;
-  border-bottom: 1px solid black;
-}
-footer, header {
-  padding: 20px 0;
-  background-color: #61dafb;
-}
-
 .submit-btn {
   margin-top: 10px;
-  margin-bottom: 5px;
-  padding: 5px 10px;
+  font-size: 16px;
+  padding: 0 0 2px 0;
   border: none;
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  color: white;
 }
-a {
-  text-decoration: none;
+.submit-btn:active {
+  color: purple;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid purple;
 }
+.submit-btn:focus{
+  color: purple;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-bottom: 1px solid purple;
+}
+
+.policy {
+  text-align: center;
+  margin: 30px;
+  font-size: 14px;
+}
+
+.code-link {
+  color: black;
+  text-decoration: underline;
+}
+
+.code-link:active {
+  color: purple;
+}
+
+.credits {
+  overflow: auto;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+}
+.gosha-link {
+  margin: 5px;
+  font-size: 14px;
+  color: white;
+}
+.gosha-link:active {
+  color: purple;
+}
+
+
+
 
 
 @media (prefers-reduced-motion: no-preference) {

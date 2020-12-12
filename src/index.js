@@ -4,10 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { positions, Provider } from "react-alert";
+import AlertMUITemplate from "react-alert-template-mui";
+
+const options = {
+  position: positions.MIDDLE
+};
+
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider template={AlertMUITemplate} {...options}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 
