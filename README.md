@@ -5,6 +5,6 @@ keep electronic records of all visitors.
 
 This app is made upon React framework and Netlify forms.
 
-You can view the build by following [the link](https://tracer.netlify.app)
+You can view the build by following [the link](https://tracr.netlify.app)
 
-(src/tracer.png)
+![](src/tracer.png)
