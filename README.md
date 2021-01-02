@@ -7,7 +7,7 @@ This app is made upon React framework and Netlify forms.
 
 You can view the build by following [the link](https://tracr.netlify.app)
 
-<h2>Website Screenshots</h2>
+<h3>Website Screenshot</h3>
 <p align="center">
 	<img src="images/tracer.png" width="300">
 </p>
