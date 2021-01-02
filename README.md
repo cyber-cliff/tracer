@@ -7,4 +7,4 @@ This app is made upon React framework and Netlify forms.
 
 You can view the build by following [the link](https://tracr.netlify.app)
 
-![](src/tracer.png)
+<img src="src/tracer.png" >
